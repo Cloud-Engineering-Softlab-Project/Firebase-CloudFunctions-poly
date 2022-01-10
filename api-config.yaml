@@ -1,0 +1,71 @@
+# openapi-energy.yaml
+swagger: '2.0'
+info:
+  title: energy-api
+  version: 1.0.0
+schemes:
+  - https
+produces:
+  - application/json
+paths:
+  
+  /energy_data:
+    post:
+      operationId: energy_data_post
+      x-google-backend:
+        address: https://europe-west1-cloud-engineering-974ea.cloudfunctions.net/energy-data
+      responses:
+        '200':
+          description: A successful response
+    
+    get:
+      operationId: energy_data_get
+      x-google-backend:
+        address: https://europe-west1-cloud-engineering-974ea.cloudfunctions.net/energy-data
+      responses:
+        '200':
+          description: A successful response
+  
+  /ref_zones:
+    post:
+      operationId: ref_zones_post
+      x-google-backend:
+        address: https://europe-west1-cloud-engineering-974ea.cloudfunctions.net/ref_zones
+      responses:
+        '200':
+          description: A successful response
+    
+    get:
+      operationId: ref_zones_get
+      x-google-backend:
+        address: https://europe-west1-cloud-engineering-974ea.cloudfunctions.net/ref_zones
+      responses:
+        '200':
+          description: A successful response
+    
+    delete:
+      operationId: ref_zones_delete
+      x-google-backend:
+        address: https://europe-west1-cloud-engineering-974ea.cloudfunctions.net/ref_zones
+      responses:
+        '200':
+          description: A successful response
+  
+  
+  /testing/hard_sleep:
+    get:
+      operationId: hard_sleep_get
+      x-google-backend:
+        address: https://europe-west1-cloud-engineering-974ea.cloudfunctions.net/hard-sleep
+      responses:
+        '200':
+          description: A successful response
+
+  /testing/soft_sleep:
+    get:
+      operationId: soft_sleep_get
+      x-google-backend:
+        address: https://europe-west1-cloud-engineering-974ea.cloudfunctions.net/soft-sleep
+      responses:
+        '200':
+          description: A successful response
